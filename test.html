@@ -1,39 +1,62 @@
-<!DOCTYPE html>檜田 雄斗
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第一期武本研究室</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>武本研メンバー</h1>
+        <div class="title">
+            <h1>1st grade takemoto lab members</h1>
+        </div>
     </header>
 
+
     <section class="member">
-        <img src="member1.jpg" alt="檜田 雄斗の写真">
+        <img src="" alt="檜田 雄斗">
         <h2>檜田 雄斗</h2>
-        <p>役職: リーダー</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p>生年月日: 2000/11/25</p>
+        <p>メールアドレス: it00153yuto.hida@gmail.com</p>
+        <p>卒業論文: 業務中に意図せず発せられる音を用いた動作判別システムの研究</p>
+        <p>コメント: 武本ゼミのメンバーであることは自分の誇りです！！4年間本当にお世話になりました！！</p>
     </section>
 
     <section class="member">
-        <img src="member2.jpg" alt="メンバー2の写真">
-        <h2>メンバー2</h2>
-        <p></p>
-        <p></p>
+        <img src="" alt="堀越 天地">
+        <h2>堀越 天地</h2>
+        <p>生年月日: 2001/10/14</p>
+        <p>メールアドレス: he.tenchi.llo@gmail.com</p>
+        <p>卒業論文: IoTデバイスを用いたサービスにおけるプライバシー保護とUI/UX向上に関する研究</p>
+        <p>コメント: </p>
     </section>
 
     <section class="member">
-        <img src="member3.jpg" alt="メンバー3の写真">
-        <h2>メンバー3</h2>
-        <p></p>
-        <p></p>
+        <img src="" alt="野口 諒介">
+        <h2>野口 諒介</h2>
+        <p>生年月日: 1996/11/26</p>
+        <p>メールアドレス: n1824.in@gmail.com</p>
+        <p>卒業論文: 歩行習慣の動機づけのための行動変容を促すアプリケーション StepUpSync の実現方式に関する研究</p>
+        <p>コメント: 武本さんのおかげで研究のおもろしさや学会の意義を知ることができました。今なら、いつかまた研究をする日が来てもおかしくないと思えます。ありがとうございました。</p>
+    </section>
+
+    <section class="member">
+        <img src="" alt="粟飯島 陽向">
+        <h2>粟飯島 陽向</h2>
+        <p>生年月日: 2001/4/7</p>
+        <p>メールアドレス: hinata@coolab.info</p>
+        <p>卒業論文: 従業員の行動音声データ取得・分析するシステム「SLeSAS」の検 討およびプロトタイプの実装・評価とキーボード打鍵音の判別性能 に対する製品の差がもたらす影響に基づく改善方法に関する研究</p>
+        <p>コメント: 2年生の講義から4年生の卒業研究に至るまで、広い範囲で武本さんにサポートして頂きました。特に臨地実務実習関係では、3年、4年共にお世話になりました。本当に、ありがとうございました。</p>
+    </section>
+
+    <section class="member">
+        <img src="" alt="根上 聡太">
+        <h2>根上 聡太</h2>
+        <p>生年月日: </p>
+        <p>メールアドレス: </p>
+        <p>卒業論文: 分散クラウドストレージ・処理基盤におけるネットワーク状況を考慮した負荷分散手法の提案と評価</p>
+        <p>コメント: </p>
     </section>
 
 </body>
@@ -47,10 +70,27 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    min-height: 100%;
+    background-position: center;
+    background-image: url(img/DSC_3804.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    height: 90vh;
     text-align: center;
-    padding: 1em;
+}
+
+.title {
+    padding-top: 5%;
+    max-height: 100%;
+    width: 45%;
+    margin: 0 0 0 auto;
+}
+
+.title h1 {
+    background-color: white;
+    font-size: 2rem;
+    padding: 1%;
 }
 
 .member {

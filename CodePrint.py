@@ -5,7 +5,7 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 
 @app.route('/')
 def index():
-    url = 'https://raw.githubusercontent.com/Tenchi-desu/MemoryOfTakemotoLab/main/test.html'
+    url = 'https://raw.githubusercontent.com/Tenchi-desu/MemoryOfTakemotoLab/main/index.html'
     response = requests.get(url)
     if response.status_code == 200:
         return Response(response.content, mimetype='text/html')

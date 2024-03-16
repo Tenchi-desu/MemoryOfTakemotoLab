@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/css/6-1-8.css">
+
     <title>第一期武本研究室</title>
 </head>
-<body>
 
-    <header>
-        <div class="title">
-            <h1>1st grade takemoto lab members</h1>
-        </div>
-    </header>
+<body>
+    <div class="bg">
+        <header>
+            <div class="title">
+                <h1 class="titletext">1st Takemoto Lab Members</h1>
+            </div>
+        </header>
+    </div>
+<div class="slideshow">
+    <ul class="slider">
+    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_01.jpg" alt=""></li>
+    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_02.jpg" alt=""></li>
+    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_03.jpg" alt=""></li>
+    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_04.jpg" alt=""></li>
+    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_05.jpg" alt=""></li>
+    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_06.jpg" alt=""></li>
+    <!--/slider--></ul>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/js/6-1-8.js"></script>
+</div>
 
 
     <section class="member">
@@ -77,28 +98,61 @@ body {
     padding: 0;
 }
 
-header {
-    min-height: 100%;
-    background-position: center;
-    background-image: url(https://raw.githubusercontent.com/Tenchi-desu/MemoryOfTakemotoLab/main/img/DSC_3804.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: auto;
-    height: 90vh;
-    text-align: center;
+.bg {
+  background: url(https://raw.githubusercontent.com/Tenchi-desu/MemoryOfTakemotoLab/main/img/DSC_3804.jpg) no-repeat center / cover;
+  position: relative;
+  height: 500px;
+}
+
+.bg::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.titletext {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  0% {
+     opacity: 0;
+     transform: translateY(0);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(20px);
+  }
 }
 
 .title {
     padding-top: 5%;
     max-height: 100%;
-    width: 45%;
+    width: 50%;
     margin: 0 0 0 auto;
 }
 
 .title h1 {
-    background-color: white;
-    font-size: 2rem;
-    padding: 1%;
+    color: #fff;
+    font-size: 4rem;
+    font-family: 'Caveat', cursive;
+    padding: 3%;
+}
+
+.slideshow { 
+margin: 2rem 0 2rem 0;
 }
 
 .member {
@@ -124,4 +178,61 @@ header {
     margin: 5px 0;
 }
 
+.slider img {
+    width:100%;
+    height:auto;
+}
+
+.slider .slick-slide {
+    margin:0 10px;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
 </style>
+
+<script>
+ $('.slider').slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 6900,
+    infinite: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    cssEase: 'linear',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 1.5,
+      }
+    }
+  ]
+  });
+</script>

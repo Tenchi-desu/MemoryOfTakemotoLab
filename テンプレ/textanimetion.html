@@ -1,0 +1,43 @@
+<div class="bg">
+  <h1 class="fadein">fadein（フェードイン）アニメーション</h1>
+</div>
+
+<style>
+.bg {
+  background: url(https://raw.githubusercontent.com/Tenchi-desu/MemoryOfTakemotoLab/main/img/DSC_3804.jpg) no-repeat center / cover;
+  position: relative;
+  height: 500px;
+}
+
+.bg::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.fadein {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  0% {
+     opacity: 0;
+     transform: translateY(0);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(20px);
+  }
+}
+</style>
